@@ -35,6 +35,10 @@ function rotate(id) {
 		addClass(document.querySelector(".skills-green"), "active");
 		var data = skillData.skill3;
 	}
+	if (id === "rotate4") {
+		addClass(document.querySelector(".skills-violet"), "active");
+		var data = skillData.skill4;
+	}
 
 	updateBars(data);
 }

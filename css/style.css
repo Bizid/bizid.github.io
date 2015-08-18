@@ -980,6 +980,9 @@ nav.slide-effect a {
 .skills-blue {
 	border-left: 4px #1b7ee4 solid;
 }
+.skills-violet {
+	border-left: 4px #931af0 solid;
+}
 .btn-skills.skills-blue::before {
 	background-color: #1b7ee4 !important;
 }
@@ -988,6 +991,9 @@ nav.slide-effect a {
 }
 .btn-skills.skills-green::before {
 	background-color: #a5da26;
+}
+.btn-skills.skills-violet::before {
+	background-color: #931af0;
 }
 /*--------------PIE Chart ---------- */
 #pie-container {
@@ -1503,7 +1509,6 @@ margin-bottom:20px;
 }
 
 #contact,
-#skill,
 #portfolio,
 #services,
 #education {

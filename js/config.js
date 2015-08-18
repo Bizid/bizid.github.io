@@ -12,25 +12,25 @@ var skillData = {
 			value: '90%'
 		},
 		{
-			title: "UI/UX Design 100%",
+			title: "MySQL 90%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
-			value: '100%'
+			value: '90%'
 		},
 		{
-			title: "Webtypography 80%",
+			title: "Sass 80%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '80%'
 		},
 		{
-			title: "Logodesign 60%",
+			title: "XSLT 70%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
-			value: '60%'
+			value: '70%'
 		},
     {
-			title: "3D Max 75%",
+			title: "Grunt/Gulp 75%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '75%'
@@ -38,10 +38,10 @@ var skillData = {
 	],
 	skill2: [
 		{
-			title: "HTML5/CSS3 90%",
+			title: "HTML5/CSS3 95%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
-			value: '90%'
+			value: '95%'
 		},
 		{
 			title: "PHP 75%",
@@ -50,39 +50,71 @@ var skillData = {
 			value: '75%'
 		},
 		{
-			title: "MySQL 90%",
+			title: "MSSQL/MySQL 75%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
-			value: '90%'
+			value: '75%'
 		},
 		{
-			title: "JS/Jquery 60%",
+			title: "JS/Jquery 75%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
-			value: '60%'
+			value: '75%'
 		},
-    {
-			title: "Wordpress 70%",
+    	{
+			title: ".NET 75%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
 			value: '70%'
 		}
 	],
-  skill3: [
+	skill3: [
 		{
-			title: "Creative 60%",
-			color: "#87b615",
-			border: "4px solid #e4f9b1",
-			value: '60%'
+			title: "Episerver 80%",
+			color: "#931af0",
+			border: "4px solid #8cc2f9",
+			value: '80%'
 		},
 		{
-			title: "Football 70%",
+			title: "Tridion 90%",
+			color: "#931af0",
+			border: "4px solid #8cc2f9",
+			value: '90%'
+		},
+		{
+			title: "Drupal 90%",
+			color: "#931af0",
+			border: "4px solid #8cc2f9",
+			value: '90%'
+		},
+		{
+			title: "WordPress 60%",
+			color: "#931af0",
+			border: "4px solid #8cc2f9",
+			value: '60%'
+		},
+    	{
+			title: "Magento 75%",
+			color: "#931af0",
+			border: "4px solid #8cc2f9",
+			value: '75%'
+		}
+	],	
+  skill4: [
+		{
+			title: "Creative 80%",
+			color: "#87b615",
+			border: "4px solid #e4f9b1",
+			value: '80%'
+		},
+		{
+			title: "Challenge 70%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
 			value: '70%'
 		},
     {
-			title: "Badminton 85%",
+			title: "Sport 85%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
 			value: '85%'
