@@ -1,36 +1,36 @@
 /* Google MAP Settings*/
-  var lat= 23.73176;  //Change the value with your address Latitude
-  var lng= 90.40640;  //Change the value with your address Longitude
-  
+  var lat= 33.0407959;  //Change the value with your address Latitude
+  var lng= -96.8365572;  //Change the value with your address Longitude
+
 //Skill Chart Data
 var skillData = {
 	skill1: [
 		{
-			title: "Adobe&nbsp;CS 90%",
+			title: "HTML/HTML5 95%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
-			value: '90%'
+			value: '95%'
 		},
 		{
-			title: "UI/UX Design 100%",
+			title: "CSS/CSS3 100%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '100%'
 		},
 		{
-			title: "Webtypography 80%",
+			title: "Javascript 80%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '80%'
 		},
 		{
-			title: "Logodesign 60%",
+			title: "Angular 60%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '60%'
 		},
     {
-			title: "3D Max 75%",
+			title: "SASS/LESS 75%",
 			color: "#f3377a",
 			border: "4px solid #f4709f",
 			value: '75%'
@@ -38,10 +38,10 @@ var skillData = {
 	],
 	skill2: [
 		{
-			title: "HTML5/CSS3 90%",
+			title: "JAVA 60%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
-			value: '90%'
+			value: '60%'
 		},
 		{
 			title: "PHP 75%",
@@ -50,19 +50,19 @@ var skillData = {
 			value: '75%'
 		},
 		{
-			title: "MySQL 90%",
-			color: "#1b7ee4",
-			border: "4px solid #8cc2f9",
-			value: '90%'
-		},
-		{
-			title: "JS/Jquery 60%",
+			title: ".NET 60%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
 			value: '60%'
 		},
+		{
+			title: "MySQL 75%",
+			color: "#1b7ee4",
+			border: "4px solid #8cc2f9",
+			value: '75%'
+		},
     {
-			title: "Wordpress 70%",
+			title: "MSSQL 70%",
 			color: "#1b7ee4",
 			border: "4px solid #8cc2f9",
 			value: '70%'
@@ -70,25 +70,31 @@ var skillData = {
 	],
   skill3: [
 		{
-			title: "Creative 60%",
+			title: "CMS 90%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
-			value: '60%'
+			value: '90%'
 		},
 		{
-			title: "Football 70%",
+			title: "Bootstrap 80%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
-			value: '70%'
+			value: '80%'
 		},
     {
-			title: "Badminton 85%",
+			title: "Photoshop 85%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
 			value: '85%'
 		},
 		{
-			title: "Leadership 90%",
+			title: "HL7 90%",
+			color: "#87b615",
+			border: "4px solid #e4f9b1",
+			value: '90%'
+		},
+		{
+			title: "SCRUM 90%",
 			color: "#87b615",
 			border: "4px solid #e4f9b1",
 			value: '90%'

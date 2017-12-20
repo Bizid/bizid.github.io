@@ -1,12 +1,4 @@
-/*
-Theme Name: FlatX
-Description: Bootstrap One Page HTML5/CSS3 Parallax Resume Template
-Version: 1.3
-Author: TheThemeLab
-Author URI: http://themeforest.net/user/thethemelab
-*/
 
-/* ##### GENERAL CLASS ##### */
 *, *:after, *::before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -18,7 +10,7 @@ html, body {
 }
 body {
 	font-family: 'Sintony', helvetica, arial, sans-serif;
-	color: #333333;
+	color: #333;
 	line-height: 1.6;
 	overflow-x: hidden;
 }
@@ -84,7 +76,7 @@ blockquote {
 }
 .section-title div span {
 	display: inline-block;
-	color: #cccccc;
+	color: #ccc;
 	text-transform: uppercase;
 }
 .section-title div span i {
@@ -136,7 +128,7 @@ p {
 	margin-top: 70px;
 }
 .bg1 {
-	background-color: #ffffff;
+	background-color: #fff;
 }
 .bg2 {
 	background-color: #F2F4F6;
@@ -151,7 +143,6 @@ p.tagline {
 	text-transform: lowercase;
 	margin-bottom: 0px !important;
 }
-/* ##### NAV BAR ##### */
 #nav-sticky-wrapper {
 	height: 70px;
 	margin-top: -70px;
@@ -192,10 +183,10 @@ p.tagline {
 .navbar .nav > li {
 	display: block;
 	float: left;
-  color: #ffffff;
+  color: #fff;
 }
 .navbar .nav > li > a,.navbar .nav > li > a:focus {
-	color: #ffffff;
+	color: #fff;
 	display: block;
 	font-size: 14px;
 	font-weight: 400;
@@ -258,11 +249,10 @@ p.tagline {
 .navbar-logo {
 	font-size: 34px;
 	line-height: 1.2;
-	color: #ffffff;
+	color: #fff;
   letter-spacing: -3px;
 	text-transform: uppercase;
 }
-/* ##### HOME SECTION ##### */
 #home {
 	position: relative;
 	width: 100%;
@@ -277,7 +267,7 @@ p.tagline {
 }
 #home h4 {
 	margin: 0px;
-	color: #ffffff;
+	color: #fff;
 }
 #home .vcard {
 	background: url("../images/overlay.png") repeat center;
@@ -402,14 +392,14 @@ p.tagline {
 	max-width: 850px;
 	margin-left: auto;
 	margin-right: auto;
-  color:#ffffff;
+  color:#fff;
 }
 .header2 .heading {
     display: block;
     font-size: 26px;
     font-weight: 700;
     text-transform: uppercase;
-    width: 100%;    
+    width: 100%;
 }
 .header2 .box-heading {
     display: block;
@@ -421,7 +411,7 @@ p.tagline {
     letter-spacing: -2px;
 }
 .header2 .box-inner {
-    border: 5px solid #FFFFFF;
+    border: 5px solid #fff;
     display: inline-block;
     padding: 0 20px;
 }
@@ -454,10 +444,9 @@ p.tagline {
 	text-align: center;
 	border-radius: 50%;
 	border: 1px solid #fff;
-	color: #FFFFFF;
+	color: #fff;
 	cursor: pointer;
 }
-/* ##### ABOUT SECTION ##### */
 h3.tagline-lg {
 	font-family: 'Tangerine', cursive;
 	color: #7c7c7c;
@@ -482,10 +471,10 @@ h3.tagline-lg {
 	overflow: hidden;
 }
 .number-counters p {
-	color: #ffffff;
+	color: #fff;
 }
 .counters-item i {
-	color: #FFFFFF;
+	color: #fff;
 	margin-top: -30px;
 }
 .counters-item {
@@ -499,7 +488,7 @@ h3.tagline-lg {
 	margin: 40px auto 10px auto;
 }
 .number-counters strong {
-	color: #FFFFFF;
+	color: #fff;
 	display: block;
 	font-size: 50px;
 	font-weight: 700;
@@ -516,7 +505,7 @@ h3.tagline-lg {
 	border-radius: 6px;
 }
 .name-title h2, .name-title h5 {
-	color: #ffffff;
+	color: #fff;
 	text-align: center;
 }
 .name-title h2 {
@@ -525,7 +514,6 @@ h3.tagline-lg {
   letter-spacing: -3px;
 	text-transform: uppercase;
 }
-/*Social Home*/
 .social-link {
 	color: #fff;
 	text-transform: uppercase;
@@ -567,7 +555,6 @@ h3.tagline-lg {
 .parallax-overlay {
 	background-color: rgba(30, 30, 30, 0.8);
 }
-/* ##### Work Experience ##### */
 .timeline-content #timeline {
 	list-style-type: none;
 	margin: 0;
@@ -623,7 +610,7 @@ h3.tagline-lg {
 .timeline-content #timeline .post-info .info-date {
 	font-size: 17px;
 	background-color: #FC6F5C;
-  color:#ffffff;
+  color:#fff;
 	padding: 5px 10px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -636,7 +623,7 @@ h3.tagline-lg {
 	border-radius: 100%;
 	margin: 10px auto;
 	background-color: #333333;
-	color: #ffffff;
+	color: #fff;
 }
 .timeline-content #timeline .post-info .box-inner i {
 	border: 2px solid #e1e1e1;
@@ -647,7 +634,7 @@ h3.tagline-lg {
 	height: 30px;
 }
 .timeline-content #timeline .arrow-left {
-	border-color: rgba(0, 0, 0, 0) #FFFFFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0) #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 	border-style: solid;
 	border-width: 9px;
 	right: 100%;
@@ -658,7 +645,7 @@ h3.tagline-lg {
 	height: 0px;
 }
 .timeline-content #timeline .arrow-right {
-	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFFFFF;
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
 	border-style: solid;
 	border-width: 9px;
 	left: 100%;
@@ -682,7 +669,6 @@ h3.tagline-lg {
 .timeline-content .action {
 	margin-top: 50px;
 }
-/* ##### EDUCATION ##### */
 .education {
 	width: 100%;
 	min-height: 100px;
@@ -723,20 +709,19 @@ h3.tagline-lg {
 	display: table-cell;
 	padding: 15px;
 	margin: 0px;
-	color: #ffffff;
+	color: #fff;
 	background-color: #FC6F5C;
 	-webkit-border-radius: 0px 10px 10px 0px;
 	-moz-border-radius: 0px 10px 10px 0px;
 	border-radius:  0px 10px 10px 0px;
 }
 .edu-grade h3, .edu-grade h5 {
-	color: #ffffff;
+	color: #fff;
 }
 .edu-new-line {
 	margin-top: 30px;
 }
 
-/* ##### SERVICES ##### */
 .services {
 	width: 100%;
 	min-height: 100px;
@@ -757,10 +742,10 @@ height:80px;
 }
 .services:hover{
 background-color: #FC6F5C;
-color:#ffffff;
-}                                
+color:#fff;
+}
 .services:hover >.services-icon i{
-background-color: #Ffffff;
+background-color: #fff;
 color:#FC6F5C;
 padding-top:12px;
 text-align: center;
@@ -782,7 +767,7 @@ border-radius: 100%;
 	display: table;
 	padding: 30px 15px;
 	margin: 0px;
-	color: #ffffff;
+	color: #fff;
   text-align: center;
 	background-color: #FC6F5C;
 	-webkit-border-radius: 10px 10px 0px 0px;
@@ -790,13 +775,12 @@ border-radius: 100%;
 	border-radius:  10px 10px 0px 0px;
 }
 .services-icon h3, .services-icon h5 {
-	color: #ffffff;
+	color: #fff;
 }
 .services-new-line {
 	margin-top: 30px;
 }
 
-/* ##### EFFECT ##### */
 .rotate {
 	display: inline-block;
 	max-width: 100%;
@@ -859,7 +843,6 @@ border-radius: 100%;
 	padding-left: 0px;
 	right: 0px;
 }
-/* ---------- Skills Details ------------*/
 section.skill-section {
 	padding: 60px 0px 0px 0px;
 }
@@ -909,7 +892,6 @@ nav.slide-effect a {
 	left: 140px;
 	top: 160px;
 }
-/* --------- Skills Buttons Hover ----*/
 .btn-skills {
 	position: relative;
 	width: 150px;
@@ -989,7 +971,6 @@ nav.slide-effect a {
 .btn-skills.skills-green::before {
 	background-color: #a5da26;
 }
-/*--------------PIE Chart ---------- */
 #pie-container {
 	padding-top: 100px;
 	max-width: 500px;
@@ -1034,7 +1015,6 @@ nav.slide-effect a {
 .bar5 {
 	left: 400px;
 }
-/* ##### CONTACT ##### */
 .form-group {
 	position: relative;
   clear:both;
@@ -1107,7 +1087,7 @@ nav.slide-effect a {
 }
 .contact-info i {
   background-color: #FC6F5C;
-	color: #ffffff;
+	color: #fff;
 	line-height: 24px;
 	margin-right: 15px;
 	text-align: center;
@@ -1125,12 +1105,11 @@ nav.slide-effect a {
 	clear: both;
 	float: none;
 }
-/* ##### FOOTER ##### */
 footer {
 	font-size: 14px;
 	padding: 0px;
 	text-align: center;
-	color: #ffffff;
+	color: #fff;
 }
 footer .social-icon {
 	margin-top: 50px;
@@ -1166,7 +1145,6 @@ footer .social-icon a:hover {
 	filter: alpha(opacity=100);
 	opacity: 1;
 }
-/**BUTTON**/
 .btn-default {
   color: #666666;
 	border: 1px solid #c7c7c7;
@@ -1180,7 +1158,7 @@ footer .social-icon a:hover {
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
 	background-color: #FC6F5C;
 	border-color: #FC6F5C;
-	color: #ffffff;
+	color: #fff;
 }
 .btn {
 	cursor: pointer;
@@ -1193,22 +1171,19 @@ footer .social-icon a:hover {
 	transition: all 0.25s ease 0s;
 }
 .btn:hover, .btn:active, .btn:focus {
-	color: #FFFFFF;
+	color: #fff;
 	opacity: 1;
 }
 .btn-dark {
-  color: #ffffff;
+  color: #fff;
 	background: none repeat scroll 0 0 #1e1e1e;
-	box-shadow: 0 3px 0 0 #444444;
+	box-shadow: 0 3px 0 0 #444;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 .btn-dark:hover {
 	background: none repeat scroll 0 0 #FC6F5C;
 }
 
-/*===================================================================================*/
-/*  WRAPPER                                                                            */
-/*===================================================================================*/
 
 #portfolio-wrap{
     position: fixed;
@@ -1246,9 +1221,6 @@ footer .social-icon a:hover {
     margin-bottom: 40px;
 }
 
-/*===================================================================================*/
-/*  PROJECT DETAILS                                                                  */
-/*===================================================================================*/
 #portfolio-items img{
     margin:0px !important;
 }
@@ -1356,9 +1328,6 @@ margin-bottom:20px;
 .slider_container .flex-direction-nav {
 	margin: 0;
 }
-/*===================================================================================*/
-/*  PROJECT FILLER                                                                   */
-/*===================================================================================*/
 
 #portfolio-filter{
     margin: 0px 0 30px;
@@ -1394,19 +1363,16 @@ margin-bottom:20px;
 .portfolio-filter-list a:hover {
     border: 1px solid #FC6F5C;
     background-color: #FC6F5C;
-    color:#ffffff;
+    color:#fff;
     opacity: 1;
 }
 
 .portfolio-filter-list a.active {
     border: 1px solid #FC6F5C;
     background-color: #FC6F5C;
-    color:#ffffff;
+    color:#fff;
 }
 
-/*===================================================================================*/
-/*  PROJECT ITEMS                                                                    */
-/*===================================================================================*/
 
 .portfolio-items {
     width: 100%;
@@ -1449,7 +1415,7 @@ margin-bottom:20px;
     width: 100%;
     height: 100%;
     background: #000000;
-    color: #ffffff;
+    color: #fff;
     top:0;
     left:0;
     opacity: 0;
@@ -1470,7 +1436,7 @@ margin-bottom:20px;
     text-transform: uppercase;
     font-size: 16px;
     text-align: center;
-    color:#ffffff;
+    color:#fff;
 }
 
 .portfolio-items article .overlay h3:after
@@ -1507,12 +1473,9 @@ margin-bottom:20px;
 #portfolio,
 #services,
 #education {
-	display: none;
+	/*display: none;*/
 }
 
-/*===================================================================================*/
-/*  ISOTOPE                                                                          */
-/*===================================================================================*/
 
 .isotope-hidden.isotope-item{
     pointer-events: none;
