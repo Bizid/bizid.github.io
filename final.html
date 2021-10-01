@@ -146,6 +146,11 @@ window.addEventListener("load", function (e)
       localStorage.removeItem('storagetime');
     }
 });
+window.addEventListener("pagehide", function (e)
+{
+  localStorage.setItem('pagehide', true );
+});
+
 window.onbeforeunload = () => {
   localStorage.setItem('onbeforeunloadWIN', true );
     let localStorageTime = parseInt(localStorage.getItem('storagetime'))
