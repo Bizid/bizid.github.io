@@ -151,6 +151,14 @@ window.addEventListener("pagehide", function (e)
   localStorage.setItem('pagehide', true );
 });
 
+window.addEventListener("visibilitychange", function() {
+  if (document.visibilityState === 'visible') {
+    localStorage.setItem('visibilitychange', true );
+  } else {
+    localStorage.setItem('visibilitychange', false );
+  }
+});
+
 window.onbeforeunload = () => {
   localStorage.setItem('onbeforeunloadWIN', true );
     let localStorageTime = parseInt(localStorage.getItem('storagetime'))
