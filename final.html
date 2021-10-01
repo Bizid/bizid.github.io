@@ -137,6 +137,7 @@ let statusWindow = document.getElementById('status');
 
 window.addEventListener("load", function (e)
 {
+  localStorage.setItem('LoadWIN', true );
     localStorage.setItem('onloadTime', new Date().getTime().toString()); //I save the moment when i am reloading
     this.openTabs = parseInt(localStorage.getItem('openTabs')) || 0; //I check if there is some tab open and if not start at 0
     localStorage.setItem('openTabs', (++this.openTabs).toString());//now the is 1 more tab open, so i saved
@@ -146,6 +147,7 @@ window.addEventListener("load", function (e)
     }
 });
 window.onbeforeunload = () => {
+  localStorage.setItem('onbeforeunloadWIN', true );
     let localStorageTime = parseInt(localStorage.getItem('storagetime'))
     localStorage.setItem('onbeforeunloadTime', new Date().getTime().toString()); //Saving the time before close a tab or browser
     if (localStorageTime != null && localStorageTime != undefined) { //if localStorageTime exits i going to check if was closed a tab or browser
