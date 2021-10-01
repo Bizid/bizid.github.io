@@ -102,15 +102,18 @@ let statusWindow = document.getElementById('status');
   console.log("___________bindUnload________________________________")
       
         win.addEventListener('beforeunload', function (){
+          localStorage.setItem('BeforeUnload', true );
           console.log("________11___bindUnload________________________________")
           window.sessionStorage.tabId = window.tabId;
           removeWindow();
         });
         win.addEventListener('unload', function (){  
+          localStorage.setItem('Unload', true );
           console.log("___22________bindUnload________________________________") 
           removeWindow();
         });
         win.addEventListener("load", function (e){   
+          localStorage.setItem('Load', true );
           console.log("___33________bindUnload________________________________")
           if (window.sessionStorage.tabId){
             console.log("______331_____bindUnload________________________________")
