@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id='status'> 
+    <span class='mainWindow'>Main Window</span>
+    <span class='childWindow'>Child Window</span>
+  </div>
+  <script>
+
+let openTabs;
+let statusWindow = document.getElementById('status');
+
+(function (win){
+    var _LOCALSTORAGETAB_KEY = 'TAB_VALIDATION';
+    var RECHECK_WINDOW_DELAY_MS = 100;
+    var _initialized = false;
+    var _isMainWindow = false;
+    var _unloaded = false;
+    var _tabArray = [];
+    var _isNewWindowPromotedToMain = false;
+    var _onWindowUpdated;
+  
+    function WindowStateManager(isNewWindowPromotedToMain, onWindowUpdated)
+    {
+        _onWindowUpdated = onWindowUpdated;
+        _isNewWindowPromotedToMain = isNewWindowPromotedToMain;
+        bindUnload();
+        determineWindowState.call(this);
+        _initialized = true;
+        _onWindowUpdated.call(this);
+    }
+
+    //Determine the state of the window 
+    //If its a main or child window
+    function determineWindowState(){
+  console.log("___________determineWindowState________________________________")
+
+        var self = this;
+        var _previousState = _isMainWindow;
+        _tabArray = localStorage.getItem(_LOCALSTORAGETAB_KEY);
+        if (_tabArray === null || _tabArray === "NaN"){
+            _tabArray = [];
+        }else{
+            _tabArray = JSON.parse(_tabArray);
+        }
+        if(window.tabId != null && window.tabId != "NaN"){
+            if(_tabArray.includes(window.tabId) == false){
+                _tabArray.push(window.tabId);
+                localStorage.setItem(_LOCALSTORAGETAB_KEY, JSON.stringify(_tabArray));
+            } 
+        }
+
+        if (_initialized){
+            //Determine if this window should be promoted
+            if (_tabArray.length <= 1 || _tabArray[0] === window.tabId){
+                _isMainWindow = true;
+            }else {
+                _isMainWindow = false;
+            }
+        }
+
+        //If the window state has been updated invoke callback
+        if (_previousState !== _isMainWindow){
+            _onWindowUpdated.call(this);
+        }
+
+        //Perform a recheck of the window on a delay
+        setTimeout(function(){ determineWindowState.call(self);}, RECHECK_WINDOW_DELAY_MS);
+    }
+
+    function removeWindow(){
+  console.log("___________removeWindow________________________________")
+
+        var _tabArray = JSON.parse(localStorage.getItem(_LOCALSTORAGETAB_KEY));
+        if(window.tabId == _tabArray[0]){
+            localStorage.removeItem(_LOCALSTORAGETAB_KEY);
+            //localStorage.clear(); //clear local storage
+            //clear session storage
+            //hard restart 
+
+        }else{
+            for (var i = 0, length = _tabArray.length; i < length; i++)
+            {
+                if (_tabArray[i] === window.tabId){
+                    _tabArray.splice(i, 1);
+                    break;
+                }
+            }
+            //Update the local storage with the new array
+            localStorage.setItem(_LOCALSTORAGETAB_KEY, JSON.stringify(_tabArray));
+
+        }
+        
+    }
+
+    //Bind unloading events  
+    function bindUnload(){
+  console.log("___________bindUnload________________________________")
+      
+        win.addEventListener('beforeunload', function (){
+          console.log("________11___bindUnload________________________________")
+          window.sessionStorage.tabId = window.tabId;
+          removeWindow();
+        });
+        win.addEventListener('unload', function (){  
+          console.log("___22________bindUnload________________________________") 
+          removeWindow();
+        });
+        win.addEventListener("load", function (e){   
+          console.log("___33________bindUnload________________________________")
+          if (window.sessionStorage.tabId){
+            console.log("______331_____bindUnload________________________________")
+              window.tabId = window.sessionStorage.tabId;
+              window.sessionStorage.removeItem("tabId");
+          }else{
+            console.log("_______332____bindUnload________________________________")
+              window.tabId = Date.now().toString();
+          }
+
+          return null;
+        });
+    }
+
+    WindowStateManager.prototype.isMainWindow = function (){
+        return _isMainWindow;
+    };
+    win.WindowStateManager = WindowStateManager;
+})(window);
+
+
+window.addEventListener("load", function (e)
+{
+    localStorage.setItem('onloadTime', new Date().getTime().toString()); //I save the moment when i am reloading
+    this.openTabs = parseInt(localStorage.getItem('openTabs')) || 0; //I check if there is some tab open and if not start at 0
+    localStorage.setItem('openTabs', (++this.openTabs).toString());//now the is 1 more tab open, so i saved
+
+    if (this.accessByTime() && parseInt(localStorage.getItem('openTabs')) == 1) { // Check if 80 seconds have passed since I close the last tab. If true i clean the session
+      localStorage.removeItem('storagetime');
+    }
+});
+window.onbeforeunload = () => {
+    let localStorageTime = parseInt(localStorage.getItem('storagetime'))
+    localStorage.setItem('onbeforeunloadTime', new Date().getTime().toString()); //Saving the time before close a tab or browser
+    if (localStorageTime != null && localStorageTime != undefined) { //if localStorageTime exits i going to check if was closed a tab or browser
+      let currentTime = new Date().getTime(),
+      timeDifference = currentTime - localStorageTime;
+      localStorage.setItem('timeDifference', timeDifference.toString());
+
+    
+    if (timeDifference < 65) { // if i have more than one tab and close the browser there is little difference lapse between close one and another this lapse will be my validation
+        //Browser Closed
+        localStorage.removeItem('storagetime');
+        localStorage.removeItem('openTabs');
+        localStorage.clear();
+     //   this.authenticationService.logout();
+    } else { // a simple tab was closed so i save the current open tabs number and the time
+        this.openTabs = parseInt(localStorage.getItem('openTabs')) || 0;
+        if (this.openTabs > 0) localStorage.setItem('openTabs', (--this.openTabs).toString());
+        localStorage.setItem('storagetime', new Date().getTime().toString()); // i save storage time to future validations
+    }
+
+    } else { //if there is not any tab closed previously I save the time of a new
+      localStorage.setItem('storagetime', new Date().getTime().toString());
+    }
+
+};
+
+function accessByTime() { //function to validate difference between the last closed an the new open
+  console.log("___________accessByTime________________________________")
+
+    let difference = parseInt(localStorage.getItem('onloadTime')) - 
+    parseInt(localStorage.getItem('onbeforeunloadTime'))
+    localStorage.setItem('difference', difference.toString());
+
+    if (difference < 80 * 1000) {
+      return false;
+    }
+    return true;
+  }
+
+var WindowStateManager = new WindowStateManager(true, windowUpdated);
+
+function windowUpdated(){
+  console.log("___________windowUpdated_________________________________")
+    statusWindow.className = (this.isMainWindow() ? 'main' : 'child');
+}
+
+  </script>
+  <style>
+  #status
+{
+  display:table;
+  width:100%;
+  height:500px;
+  border:1px solid black;
+}
+span
+{
+  vertical-align:middle;
+  text-align:center; 
+  margin:0 auto;
+  font-size:50px;
+  font-family:arial;
+  color:#ba3fa3;  
+  display:none;
+}
+
+#status.main .mainWindow,
+#status.child .childWindow
+{
+  display:table-cell;
+}
+
+.mainWindow
+{
+  background-color:#22d86e;
+}
+.childWindow
+{
+  background-color:#70aeff;
+}
+
+
+  </style>
+</body>
+</html>
