@@ -28,6 +28,15 @@
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="75">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <a href="https://www.closermag.fr/" target="_blank">
+          Closermag
+        </a>
+        <img src="images/thumb30.png" alt="image" />
+      </div>
+    </div>
     <!-- Pre-loader -->
     <div class="mask">
       <div id="intro-loader">
@@ -152,7 +161,7 @@
               <h2>Lassaad Bizid</h2> <!-- Your Name -->
               <h5>Front-end developer</h5> <!-- Your Designation -->
             </div>
-            <p>Enthusiastic, result driven, customer focused, attentive to details, can think “out of the box”, with 11 years of experience in designing, implementing and adapting technically sophisticated online web applications, HTML, PHP, Java, .Net and HL7 integration</p>
+            <p>Enthusiastic, result driven, customer focused, attentive to details, can think “out of the box”, with 15 years of experience in designing, implementing and adapting technically sophisticated online web applications, HTML, PHP, Java, .Net and HL7 integration</p>
             <ul>
               <li>excellent problem solving and decision making skills</li>
               <li>strong troubleshooting and analytical skills with considerable attention to detail</li>
@@ -284,6 +293,9 @@
                 <li>
                 <a href="#" data-cat="html">HTML/CSS</a>
                 </li>
+                <li>
+                <a href="#" data-cat="js">JS</a>
+                </li>
               </ul>
               <!--End portfolio category-->
             </div>
@@ -295,19 +307,19 @@
       </div>
       <!-- End #portfolio-filter -->
       <div id="portfolio-items" class="portfolio-items item_fade_in">
-        <article class="php">
-          <a href="https://www.closermag.fr/" target="_blank">
+        <article class="php js">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="https://www.closermag.fr/" data-image="images/thumb30.png" data-title="Closermag">
             <img src="images/thumb30.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-film"></i>
               <h3>French website done in Drupal</h3>
-              <span>PHP / DRUPAL</span>
+              <span>PHP / DRUPAL / JS</span>
             </div>
             <!-- End .overlay -->
           </a>
         </article>
         <article class="php html">
-          <a href="https://www.kop-kande.dk/" target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="https://www.kop-kande.dk" data-image="images/thumb31.png" data-title="Kop-Kande">
             <img src="images/thumb31.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
@@ -318,7 +330,7 @@
           </a>
         </article>
         <article class="java html">
-          <a href="https://www.leroymerlin.ua/"  target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="https://www.leroymerlin.ua/" data-image="images/thumb33.png" data-title="Leroymerlin">
             <img src="images/thumb33.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-picture-o"></i>
@@ -329,7 +341,7 @@
           </a>
         </article>
         <article class="html">
-          <a href="http://www.whereismydoctor.com/" target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="" data-image="images/thumb34.png" data-title="Whereismydoctor">
             <img src="images/thumb34.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-film"></i>
@@ -340,7 +352,7 @@
           </a>
         </article>
         <article class="php html">
-          <a href="http://www.media4good.org/work.php" target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="" data-image="images/thumb35.png" data-title="Media4good">
             <img src="images/thumb35.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-picture-o"></i>
@@ -350,63 +362,52 @@
             <!-- End .overlay -->
           </a>
         </article>
-        <article class="html php">
-          <a href="http://www.ittour.com/" target="_blank">
-            <img src="images/thumb36.png" alt="image" />
-            <div class="overlay">
-              <i class="fa fa-camera"></i>
-              <h3>Tour agency web site done in PHP</h3>
-              <span>PHP / HTML</span>
-            </div>
-            <!-- End .overlay -->
-          </a>
-        </article>
-        <article class="html php">
-          <a href="http://www.ittour.com.ua/" target="_blank">
+        <article class="html php js">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://www.ittour.com.ua/" data-image="images/thumb37.png" data-title="Ittour">
             <img src="images/thumb37.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
               <h3>Tour agency web site done in PHP</h3>
-              <span>PHP / HTML</span>
+              <span>PHP / HTML / JS</span>
             </div>
             <!-- End .overlay -->
           </a>
         </article>
-        <article class="net html">
-          <a href="http://telenor.dk" target="_blank">
+        <article class="net html js">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://www.telenor.dk/" data-image="images/thumb38.png" data-title="Telenor">
             <img src="images/thumb38.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
               <h3>Danish telecomunication web site</h3>
-              <span>NET / HTML</span>
+              <span>NET / HTML / JS</span>
             </div>
             <!-- End .overlay -->
           </a>
         </article>
-        <article class="net html">
-          <a href="http://telenor.dk" target="_blank">
-            <img src="images/thumb39.png" alt="image" />
+        <article class="js html java">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://www.vericast.com/" data-image="images/thumb45.png" data-title="Vericast">
+            <img src="images/thumb45.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
-              <h3>Danish telecommunication web site</h3>
-              <span>NET / HTML</span>
+              <h3>Marketing technology</h3>
+              <span>HTML / JS / JAVA</span>
             </div>
             <!-- End .overlay -->
           </a>
         </article>
-        <article class="net html">
-          <a href="http://forexltd.co.uk" target="_blank">
-            <img src="images/thumb40.png" alt="image" />
+        <article class="js html net">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://www.sitepro.com/" data-image="images/thumb44.png" data-title="Sitepro">
+            <img src="images/thumb44.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
-              <h3>Forex web site done in .NET</h3>
-              <span>NET / HTML</span>
+              <h3>Oilfield technology</h3>
+              <span>HTML / JS / .NET</span>
             </div>
             <!-- End .overlay -->
           </a>
         </article>
         <article class="php html">
-          <a href="http://spareka.fr" target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://spareka.fr" data-image="images/thumb43.png" data-title="Spareka">
             <img src="images/thumb43.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
@@ -417,12 +418,12 @@
           </a>
         </article>
         <article class="php html java" >
-          <a href="http://vaultmr.com" target="_blank">
+          <a href="javascript:;" onclick="openModal(this)"  data-url="http://vaultmr.com" data-image="images/thumb41.png" data-title="VaultMR">
             <img src="images/thumb41.png" alt="image" />
             <div class="overlay">
               <i class="fa fa-camera"></i>
               <h3>Vault Medical Record web site</h3>
-              <span>PHP / HTML</span>
+              <span>PHP / HTML / JAVA</span>
             </div>
             <!-- End .overlay -->
           </a>
@@ -431,7 +432,7 @@
       <!-- End #portfolio-items.portfolio-items -->
     </section>
     <!-- End Portfolio Section -->
-
+    
     <!-- Skill Section -->
     <section id="skill" class="section-content bg1 skill-section">
       <div class="container">
@@ -505,7 +506,38 @@
                     <div class="box-inner">
                       <i class="fa fa-check"></i>
                     </div>
-                    <h5 class="info-date">Feb 2018 to Present</h5>
+                    <h5 class="info-date">Feb 2020 to Present</h5>
+                  </div>
+                  <div class="post-body clearfix text-right">
+                    <div class="post-title">
+                      <h4>HarlandClarke / Vericast</h4>
+                      <h5>Senior front-end developer</h5>
+                    </div>
+                    <div class="post-text">
+                      <p>Develop, maintain, and support the web-based applications for Harland Clarke.<br/>
+                        Redesign web-based applications to increase performance and scalability for them.<br/>
+                        Implement new views, VueJs components using HTML, SASS, Javascript.<br/>
+                        Write unit tests using the Jest testing framework.<br/>
+
+Using technologies: VueJs, JavaScript, AngularJS, TypeScript, Jest, Go, GIT, HTML5, CSS, SaSS, Gulp, Gitlab, Adobe Analytics, Jenkins, Jira.
+					  
+                       </p>
+                    </div>
+                    <div class="arrow-right"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline item -->
+		   <!-- Timeline item -->
+            <li class="timeline-item">
+              <div class="item_left">
+                <div class="well post">
+                  <div class="post-info bg2 text-center">
+                    <div class="box-inner">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <h5 class="info-date">Jan 2018 to Feb 2020</h5>
                   </div>
                   <div class="post-body clearfix text-right">
                     <div class="post-title">
@@ -893,6 +925,7 @@ Using technologies: .Net, JavaScript, AngularJS, Fabric JS, D3 Js, Google charts
       <!-- End Footer Container -->
     </footer>
 
+
   <!-- Js Library -->
   <script type="text/javascript" src="js/modernizr.js"></script>
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -915,6 +948,33 @@ Using technologies: .Net, JavaScript, AngularJS, Fabric JS, D3 Js, Google charts
   <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    function openModal(el){
+      let imagePath = el.getAttribute('data-image')
+      let url = el.getAttribute('data-url')
+      let title = el.getAttribute('data-title')
+      var modal = document.getElementById("myModal");
+      modal.querySelector('img').src= imagePath;
+      modal.querySelector('a').textContent= title;
+      modal.querySelector('a').href=url;
+      if(url.length < 1){
+        modal.querySelector('a').style.display = "none";
+      }else{
+        modal.querySelector('a').style.display = "block";
+      }
+      var span = document.getElementsByClassName("close")[0];
+      modal.style.display = "block";
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+  }
+</script>
   <!-- Js Library -->
+  
   </body>
 </html>
